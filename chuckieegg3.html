@@ -1,0 +1,69 @@
+<DOCTYPE html>
+    <!-- 
+    Hannah Karampatsos
+    1/16/19
+    Attempt 3 at Chuckie Egg
+	move files 
+    -->
+    <html>
+
+    <head>
+        <Title>Chuckie Egg 3</title>
+        <!--<link rel="stylesheet" type="text/css" href="../CSS/egg.css"> -->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.2/p5.js"></script>
+
+    </head>
+
+    <body>
+
+ 
+        <script>
+
+            var x = 20;
+            var y = 20;
+            var piskel;
+
+            function preload() {
+                piskel = loadImage("https://imgur.com/a/0XdEIJ9");
+            }
+
+            function setup() {
+                createCanvas(1080, 720);
+                strokeWeight(1);
+                frameRate(60);
+
+
+            }
+
+            function draw() {
+                background(102);
+
+                y += 5;
+
+                if (keyIsDown(LEFT_ARROW)) {
+                    x -= 5;
+                }
+                if (keyIsDown(RIGHT_ARROW)) {
+                    x += 5;
+                }
+                if (keyIsDown(UP_ARROW)) {
+                    y -= 10;
+                }
+                if (keyIsDown(DOWN_ARROW)) {
+                    y += 2;
+                }
+
+
+
+                image(piskel, x, y, 50, 50);
+
+            }
+
+
+
+        </script>
+    </body>
+
+    </html>
